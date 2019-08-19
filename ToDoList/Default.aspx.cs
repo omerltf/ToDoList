@@ -34,9 +34,10 @@ namespace ToDoList
             {
                 ErrorMessage.Visible = false;
 
-                ToDoItemData.AddItem(Description.Text);
+                ToDoItemData.AddItem(Description.Text,int.Parse(Priority.SelectedValue));
                 PopulateList();
                 Description.Text = string.Empty;
+                Priority.SelectedIndex = 0;
             }
             else
             {

@@ -8,6 +8,7 @@ namespace ToDoList.Models
     public class ToDoItem
     {
         public string Description { get; set; }
+        public int Priority { get; set; }
         public bool Done { get; set; }
     }
 }

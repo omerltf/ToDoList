@@ -27,6 +27,13 @@
                             text='<%# Eval("Description") %>'
                             font-strikeout='<%# Eval("Done") %>' />
                     </td>
+
+                    <td>
+                        <asp:label ID="Priority" runat ="server"
+                            text='<%# Eval("Priority") %>'
+                            visible='<%# !((bool)Eval("Done")) %>' />
+                    </td>
+
                     <td>
                         <asp:button id="Done" runat="server" text="Done"
                             commandname="Done" 
@@ -43,6 +50,12 @@
         <h2>Add New TODO</h2>
 
         <asp:textbox id="Description" runat="server" />
+        <asp:DropDownList ID="Priority" runat="server">
+            <asp:ListItem Text="1"></asp:ListItem>
+            <asp:ListItem Text="2"></asp:ListItem>
+            <asp:ListItem Text="3"></asp:ListItem>
+
+        </asp:DropDownList>
         <asp:button id="Submit" runat="server" text="Submit" onclick="Submit_Click" />
 
         <div>

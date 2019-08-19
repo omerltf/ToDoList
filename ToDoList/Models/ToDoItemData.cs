@@ -23,10 +23,11 @@ namespace ToDoList.Models
             return Items;
         }
 
-        public static void AddItem(string description)
+        public static void AddItem(string description, int priority)
         {
             ToDoItem item = new ToDoItem();
             item.Description = description;
+            item.Priority = priority;
             item.Done = false;
 
             Items.Add(item);
