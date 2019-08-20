@@ -17,7 +17,7 @@
                 <table>
                     <tr>
                         <th>Description</th>
-                        <th>&nbsp;</th>
+                        <th>Priority</th>
                     </tr>
             </headertemplate>
             <itemtemplate>
@@ -29,16 +29,17 @@
                     </td>
 
                     <td>
-                        <asp:label ID="Priority" runat ="server"
+
+                        <pre>     <asp:label ID="Priority" runat ="server"
                             text='<%# Eval("Priority") %>'
-                            visible='<%# !((bool)Eval("Done")) %>' />
+                            visible='<%# !((bool)Eval("Done")) %>' /></pre>
                     </td>
 
                     <td>
-                        <asp:button id="Done" runat="server" text="Done"
+                        <pre>   <asp:button id="Done" runat="server" text="Done"
                             commandname="Done" 
                             commandargument='<%# Container.ItemIndex %>'
-                            visible='<%# !((bool)Eval("Done")) %>' />
+                            visible='<%# !((bool)Eval("Done")) %>' /></pre>
                     </td>
                 </tr>
             </itemtemplate>
